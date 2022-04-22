@@ -77,8 +77,8 @@ async function print() {
   let cusd = fusd.format(await usd());
 
   for (let key in data) {
-      let dl = Number(data[key].price) + (Number(data[key].price)/100 * 10) + parseFloat(31,2) + parseFloat(13);
-      let sum = ((dl + (dl/100 * parseFloat(0,99))) * parseFloat(await usd())) + parseFloat(99);
+      let dl = Number(data[key].price) + (Number(data[key].price)/100 * 10) + 31.2 + 13;
+      let sum = ((dl + (dl/100 * 0.99)) * parseFloat(await usd())) + 99;
         //console.log(Number(data[key].price) + parseFloat('35.45'));
       if (key != 1) {
           cusd = '';
@@ -90,7 +90,7 @@ async function print() {
         "</td><td>" +
         fusd.format(data[key].price) +
         "</td><td>"+
-        fusd.format(76) +
+        fusd.format(31.2 + 13) +
         "</td><td>" +
         new Intl.NumberFormat("ru", {style: "currency", currency: "RUB", maximumFractionDigits: 0}).format(sum) +
         "</td><td></td><td>"+
