@@ -77,8 +77,8 @@ async function print() {
   let cusd = fusd.format(await usd());
 
   for (let key in data) {
-      let nl = Number(data[key].price)/100 * 7;
-      let sum = (Number(data[key].price) + Number(parseFloat('76') + nl)) * parseFloat(await usd());
+      let dl = Number(data[key].price) + (Number(data[key].price)/100 * 10) + parseFloat(31,2) + parseFloat(13);
+      let sum = ((dl + (dl/100 * parseFloat(0,99))) * parseFloat(await usd())) + parseFloat(99);
         //console.log(Number(data[key].price) + parseFloat('35.45'));
       if (key != 1) {
           cusd = '';
